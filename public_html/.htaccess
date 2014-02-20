@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteCond $1 (assets/|bootstrap/|_less/|plugins/)
+RewriteRule (assets/|bootstrap/|_less/|plugins/)(.*)$ $1$2 [L]
+
+RewriteCond $1 !^(index\.php|css|js|images|robots\.txt)
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+
